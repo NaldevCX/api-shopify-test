@@ -8,7 +8,7 @@
           {%- endif -%}
               <div class="page-width">
                 <p class="announcement-bar__message {{ block.settings.text_alignment }} h5">
-                  <i class="fa fa-snowflake-o" ></i>
+               
               
                   {{ block.settings.text | escape }}
                   {%- if block.settings.link != blank -%}
@@ -36,7 +36,7 @@
         {
           "type": "text",
           "id": "text",
-          "default": "Welcome to our store",
+          "default": "</i> Welcome to our store",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
         },
         {
