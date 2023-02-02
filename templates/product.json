@@ -20,6 +20,11 @@
           "settings": {
           }
         },
+        "fec9246e-5bcf-4939-8768-45d59851ef42": {
+          "type": "shopify:\/\/apps\/wishlist-wishify\/blocks\/product\/e14a43b5-34c6-492d-b46f-3ad2eda08696",
+          "settings": {
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -94,6 +99,7 @@
         "vendor",
         "title",
         "price",
+        "fec9246e-5bcf-4939-8768-45d59851ef42",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
