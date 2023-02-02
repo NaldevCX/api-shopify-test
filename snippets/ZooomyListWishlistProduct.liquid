@@ -7,7 +7,7 @@
      {% endif %}
 
   {% else %}
-<div data-shopify="payment-button" data-has-selling-plan="false" data-has-fixed-selling-plan="false" class="shopify-payment-button">
+<!-- <div data-shopify="payment-button" data-has-selling-plan="false" data-has-fixed-selling-plan="false" class="shopify-payment-button">
   <div>
     <div>
       <div>
@@ -17,7 +17,7 @@
             </svg>
           </div>
         </div>
-        <button type="button" class="shopify-payment-button__button shopify-payment-button__button--unbranded" data-testid="Checkout-button">Buy it now
+        <button type="button" class="shopify-payment-button__button shopify-payment-button__button--unbranded" data-testid="Checkout-button"> 
         </button>
 
         <div>
@@ -29,5 +29,11 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+  {% if template contains "product" %}<div id="ZlistWishlist" data-product-id="{{product.id}}" data-handle = "{{product.handle}}" href="https://apishoptesting.myshopify.com/account/login" 
+              
+        data-image="{{product.featured_image | img_url: "360x"}}"  data-variantname="{{product.selected_or_first_available_variant.title}}" data-title="{{product.title}}" data-variant="{{product.selected_or_first_available_variant.id}}" data-price="{{product.selected_or_first_available_variant.price | remove: "." | remove: "," | divided_by: 100.0 }}"></div>
+<script  src="https://zooomyapps.com/wishlist/ListWishlistProduct.js" data-product-id="{{product.id}}" data-shop-id="{{shop.permanent_domain}}" data-customer-id="{{customer.id}}" ></script>
+     {% endif %}
   {% endif %}
