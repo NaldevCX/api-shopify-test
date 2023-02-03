@@ -1,43 +1,4 @@
-{% if customer %}
-
 {% if template contains "product" %}<div id="ZlistWishlist" data-product-id="{{product.id}}" data-handle = "{{product.handle}}" 
-              
         data-image="{{product.featured_image | img_url: "360x"}}"  data-variantname="{{product.selected_or_first_available_variant.title}}" data-title="{{product.title}}" data-variant="{{product.selected_or_first_available_variant.id}}" data-price="{{product.selected_or_first_available_variant.price | remove: "." | remove: "," | divided_by: 100.0 }}"></div>
 <script  src="https://zooomyapps.com/wishlist/ListWishlistProduct.js" data-product-id="{{product.id}}" data-shop-id="{{shop.permanent_domain}}" data-customer-id="{{customer.id}}" ></script>
      {% endif %}
-
-  {% else %}
-<!-- <div data-shopify="payment-button" data-has-selling-plan="false" data-has-fixed-selling-plan="false" class="shopify-payment-button">
-  <div>
-    <div>
-      <div>
-        <div class="shopify-cleanslate">
-          <div id="shopify-svg-symbols" class="R9tDu8JrE_i1ctOEo0v_" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" focusable="false">
-            </svg>
-          </div>
-        </div>
-        <button type="button" class="shopify-payment-button__button shopify-payment-button__button--unbranded" data-testid="Checkout-button"> 
-        </button>
-
-        <div>
-          <div>
-          </div>
-        </div>
-        <div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-<button style="background-color:black; color:white; padding:10px 20px; border:none; border-radius:0; font-size:1.5rem; cursor:pointer; text-align:center; width:100%; max-width:200px; display:inline-block; box-sizing:border-box; letter-spacing: 0.06rem;
-
-    font-family: var(--font-body-family);
-    font-style: var(--font-body-style);
-    font-weight: var(--font-body-weight);  
-     @media (max-width:767px){ font-size:16px; padding:8px 16px; }" onclick="window.location.href = 'https://apishoptesting.myshopify.com/account/login'">
- <i class="fa  fa-heart-o" aria-hidden="true"></i> Add to Wishlist
-</button>
-  
-     {% endif %}
- 
